@@ -1,0 +1,41 @@
+<div class="well">
+    <h4 style="padding-left: 550px;">person list</h4>
+</div>
+<div class="container">
+    <div class="row">
+        <!-- Our Special dropdown has class show-on-hover -->
+        <div class="btn-group show-on-hover">
+            <a href="/" ><button type="button" class="btn btn-primary ">
+          Add Person
+          </button></a>
+        </div>
+        <!-- Single button -->
+    </div>
+</div>
+<div class="container-fluid">
+    <!--dropdown menu-->
+    <!--table-->
+    <table class="table table-striped">
+        <thead>
+            <tr class="info">
+                <th>Name</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>mobile</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            <tr>
+                <!--first example-->
+                <td><a href="/data/{{_id}}">{{name}}</a></td>
+                <td>{{age}}</td>
+                <td>{{gender}}</td>
+                <td class="danger">{{mobile}}</td>
+                <td><a href="/update/{{_id}}" ><button type="button" class="btn btn-primary "> Edit</button></a>
+                <a href="/delete/{{_id}}" ><button type="button" class="btn btn-primary "> Delete</button></a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

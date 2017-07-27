@@ -1,0 +1,32 @@
+<div class="well">
+    <h4 style="padding-left: 550px;">Person list</h4>
+</div>
+<div class="container">
+    <div class="row">
+    </div>
+</div>
+<div class="container-fluid">
+    <!--dropdown menu-->
+    <!--table-->
+    <table class="table table-striped">
+        <thead>
+            <tr class="info">
+                <th>Name</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>mobile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!--first example-->
+                <td>{{docs.name}}</td>
+                <td>{{docs.age}}</td>
+                <td>{{docs.gender}}</td>
+                <td class="danger">{{docs.mobile}}</td>
+                <td><a href="/update/{{docs._id}}">Edit</a></td>
+                <td><a href="/delete/{{docs._id}}">Remove</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
